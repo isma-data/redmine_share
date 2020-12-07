@@ -17,7 +17,7 @@ class LinkMailer < Mailer
 
     s = l(:share_label_subject, sender: from.name, record: @record)
 
-    mail to: to, subject: "[#{project.name}] #{s}"
+    mail to: to, subject: "#{project.name} [##{obj.id}] #{s}"
   end
 
   def record(obj)
